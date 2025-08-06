@@ -12,19 +12,17 @@ public:
 		cout << "Enter x: ";
 		cin >> x;
 	}
-	void compare(CompareNumbers ob1, CompareNumbers ob2)
+	void compare(CompareNumbers ob2)
 	{
-		if (ob1.x == ob2.x)
+		if (x == ob2.x)
 		{
 			cout << "Equaled";
 		}
-		else if(ob1.x != ob2.x)
+		else if(x != ob2.x)
 		{
 			cout << "Not Equaled";
 		}
-
 	}
-
 };
 
 
@@ -38,7 +36,7 @@ int main()
 	ob1.print();
 	ob2.print();
 
-	ob2.compare(ob1,ob2);
+	ob2.compare(ob1);
 
 
 }
