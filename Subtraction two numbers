@@ -1,0 +1,40 @@
+using namespace std;
+#include <iostream>
+
+
+class subtraction
+{
+private:
+	int x;
+	int y;
+public:
+	void print()
+	{
+		cout << "Enter x: ";
+		cin >> x;
+		cout << "Enter y: ";
+		cin >> y;
+
+	}
+	void operator-(subtraction ob1)
+	{
+		cout<<x<<" - "<<ob1.y <<" = " << x - ob1.y;
+	}
+
+};
+
+
+int main()
+{
+
+	subtraction ob1;
+	subtraction ob2;
+
+	ob1.print();
+	ob2.print();
+
+	ob1 - ob2;
+
+
+}
+
