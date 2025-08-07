@@ -1,0 +1,38 @@
+using namespace std;
+#include <iostream>
+
+class perfix
+{
+private :
+	int x;
+public:
+	void print()
+	{
+		cout << "Enter x: ";
+		cin >> x;
+	}
+
+	void operator++()
+	{
+		x ++;
+	}
+	void out()
+	{
+		cout << x;
+	}
+
+};
+
+
+
+int main()
+{
+
+	perfix ob1;
+	ob1.print();
+	++ob1;
+	ob1.out();
+
+
+
+}
