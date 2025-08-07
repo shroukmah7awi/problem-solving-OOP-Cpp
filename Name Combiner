@@ -1,0 +1,35 @@
+using namespace std;
+#include <iostream>
+
+
+class names
+{
+private:
+	string  name;
+public:
+	void print()
+	{
+		cout << "Enter name: ";
+		cin >> name;
+	}
+	void operator+(names ob)
+	{
+		cout<<ob.name +" " +name;
+	}
+
+};
+
+
+int main()
+{
+
+	names ob1;
+	names ob2;
+
+	ob1.print();
+	ob2.print();
+
+	ob1 + ob2;
+
+
+}
