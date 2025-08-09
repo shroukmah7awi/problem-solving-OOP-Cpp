@@ -1,0 +1,30 @@
+using namespace std;
+#include <iostream>
+
+
+class Sum
+{
+public:
+	virtual void add(int a, int b)=0;
+	
+};
+
+class s1 : public Sum
+{
+public :
+	 void add (int a, int b)override
+	 {
+		cout<< a + b;
+	 }
+};
+int main()
+{
+	Sum* sum;
+	s1 a;
+
+	sum = &a;
+	sum->add(2, 4);
+
+	
+
+}
