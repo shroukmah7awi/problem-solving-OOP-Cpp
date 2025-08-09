@@ -1,0 +1,20 @@
+using namespace std;
+#include <iostream>
+
+
+class Sum
+{
+public:
+	virtual void add(int a, int b)final
+	{
+		cout << a + b;
+	}
+	
+};
+
+int main()
+{
+
+	Sum s;
+	s.add(2,4);
+}
