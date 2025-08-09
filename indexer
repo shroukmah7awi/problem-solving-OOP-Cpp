@@ -1,0 +1,23 @@
+using namespace std;
+#include <iostream>
+
+
+class Sum
+{
+private:
+	int numbers[10];
+public:
+	int& operator[](int index)
+	{
+		return numbers[index];
+	}
+
+};
+
+int main()
+{
+
+	Sum s;
+	s[1] = 10;
+	cout << s[1];
+}
