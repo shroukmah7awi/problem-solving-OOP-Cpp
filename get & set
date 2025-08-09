@@ -1,0 +1,29 @@
+
+using namespace std;
+#include <iostream>
+
+class Count
+{
+private :
+	int x;
+public :
+	void setb(int n)
+	{
+		x = n;
+    }
+
+	int getb()
+	{
+		return x;
+
+	}
+
+};
+
+int main()
+{
+	Count c;
+	c.setb(3);
+	cout<<c.getb();
+
+}
