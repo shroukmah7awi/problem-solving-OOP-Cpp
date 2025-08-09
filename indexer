@@ -2,14 +2,14 @@ using namespace std;
 #include <iostream>
 
 
-class Sum
+class Indexer
 {
 private:
 	int numbers[10];
 public:
-	int& operator[](int index)
+	int& operator[](int i)
 	{
-		return numbers[index];
+		return numbers[i];
 	}
 
 };
@@ -17,7 +17,7 @@ public:
 int main()
 {
 
-	Sum s;
-	s[1] = 10;
-	cout << s[1];
+	Indexer i;
+	i[1] = 10;
+	cout <<i[1];
 }
