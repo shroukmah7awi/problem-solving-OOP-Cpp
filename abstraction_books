@@ -1,0 +1,58 @@
+using namespace std;
+#include <iostream>
+
+
+class library
+{
+public :
+	virtual void name(string a) = 0;
+	virtual void price(int b) = 0;
+
+};
+
+class book1:public library
+{
+public :
+	void name(string a) override
+	{
+		cout << "name is :  " <<a<< endl;
+	}
+	void price(int b) override
+	{
+		cout << "price is :  " << b<<" " << "$" << endl;
+	}
+
+};
+
+
+class book2 :public library
+{
+public:
+	void name(string a) override
+	{
+		cout << "name is :  "<<a << endl;
+	}
+	void price(int b) override
+	{
+		cout << "price is : " <<b << " " << "$" << endl;
+	}
+
+};
+
+
+
+int main()
+{
+	book1 a;
+	book2 b;
+
+	a.name("Murder on the Orient Express");
+	a.price(200);
+
+	cout << "------------------------------"<<endl;
+
+	b.name("And Then There Were None");
+	b.price(300);
+	
+
+}
