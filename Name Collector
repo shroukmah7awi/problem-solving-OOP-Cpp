@@ -1,0 +1,25 @@
+using namespace std;
+#include <iostream>
+
+
+class Indexer
+{
+private :
+	string names[3];
+public:
+	string& operator[](int n)
+	{
+		return names[n];
+	}
+
+};
+
+int main()
+{
+	Indexer i;
+	i[0] = "Shrouk";
+	i[1] = "Medhat";
+	i[2] = "Elmahallwy";
+	cout << i[0]<<" "<<i[1]<<" "<<i[2];
+
+}
