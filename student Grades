@@ -1,0 +1,46 @@
+using namespace std;
+#include <iostream>
+
+
+class Names
+{
+private :
+	string names[3];
+public:
+	string& operator[](int n)
+	{
+		return names[n];
+	}
+
+
+};
+class Degree
+{
+private :
+	float degree[3];
+public:
+	float& operator[](int d)
+
+	{
+		return degree[d];
+	}
+
+};
+int main()
+{
+	Names n;
+	n[0] = "shrouk-";
+	n[1] = "dina-";
+	n[2] = "hala-";
+
+	Degree d;
+	d[0] = 98;
+	d[1] = 77;
+	d[2] = 87;
+	
+
+	cout << n[0] << d[0]<<endl;
+	cout << n[1] << d[1]<<endl;
+	cout << n[2] << d[2]<<endl;
+
+}
