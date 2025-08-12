@@ -1,0 +1,41 @@
+using namespace std;
+#include <iostream>
+
+class work
+{
+private:
+	int salary;
+	string names;
+public:
+	work(int s,string n)
+	{
+		salary = s;
+		names = n;
+	}
+	void print(work ob1, work ob2, work ob3);
+	friend void average(work ob1,work ob2,work ob3);
+
+};
+
+void work::print(work ob1, work ob2, work ob3)
+{
+	cout << "first worker: " << ob1.names<<endl;
+	cout << "second worker: " << ob2.names << endl;
+	cout << "third worker: " << ob3.names << endl;
+
+}
+
+void average(work ob1, work ob2, work ob3)
+{
+	cout << "average= " << ((ob1.salary + ob2.salary + ob3.salary) / 3);
+}
+
+int main()
+{
+	work ob1(1200,"shrouk");
+	work ob2(900, "mena");
+	work ob3(1800, "hala");
+
+	ob1.print(ob1,ob2,ob3);
+	average(ob1, ob2, ob3);
+}
