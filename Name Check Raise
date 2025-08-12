@@ -1,0 +1,93 @@
+using namespace std;
+#include <iostream>
+
+class teacher
+{
+private :
+	string name;
+	int salary;
+
+public :
+	teacher(string n, int s)
+	{
+		name = n;
+		salary = s;
+	}
+	void print1(teacher ob1);
+	friend void increase1(teacher ob1);
+
+};
+
+void teacher::print1(teacher ob1)
+{
+	cout << "name: " << ob1.name <<"\t";
+	
+}
+
+void increase1(teacher ob1)
+{
+	if (ob1.name == "Ali")
+	{
+		ob1.salary += 1000;
+		cout << "salary: " << ob1.salary;
+	}
+	else
+	{
+		cout << "salary: "<< ob1.salary;
+	}
+}
+
+
+
+
+class engineer
+{
+private :
+	string name;
+	int salary;
+
+public:
+	engineer(string name, int salary)
+	{
+		this->name = name;
+		this->salary = salary;
+	}
+
+	void print2(engineer ob2);
+	friend  void increase2(engineer ob2);
+};
+
+void engineer ::print2(engineer ob2)
+{
+	cout << "\n" << "--------------------------------------------------"<<"\n";
+	cout << "name: " << ob2.name << "\t";
+}
+void increase2(engineer ob2)
+{
+	if (ob2.name == "Ahmed")
+	{
+		ob2.salary += 1000;
+		cout << "salary: " << ob2.salary;
+	}
+	else
+	{
+		cout << "salary: " << ob2.salary;
+	}
+}
+
+
+
+int main()
+{
+	teacher t("Ali", 1000);
+	t.print1(t);
+	increase1(t);
+
+
+
+	engineer e("Ahmed", 1300);
+	e.print2(e);
+	increase2(e);
+
+
+}
