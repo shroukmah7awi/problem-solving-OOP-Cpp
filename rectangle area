@@ -1,0 +1,66 @@
+using namespace std;
+#include<iostream>
+
+
+class rectangle
+{
+private:
+	int width;
+	int hight;
+
+public :
+	rectangle(int width,int hight)
+	{
+		this->width = width;
+		this->hight = hight;
+
+
+	}
+	
+
+	void print(rectangle ob1, rectangle ob2);
+	friend void bigger(rectangle ob1, rectangle ob2);
+
+};
+
+void rectangle::print(rectangle ob1, rectangle ob2)
+{
+	int area1 = ob1.hight * ob1.width;
+	int area2 = ob2.hight * ob2.width;
+
+	cout <<"area 1= " << area1 << "\n" << "area 2= " << area2<<endl;
+}
+
+void bigger(rectangle ob1, rectangle ob2)
+{
+	int area1 = ob1.hight * ob1.width;
+	int area2 = ob2.hight * ob2.width;
+	if (area1 > area2)
+	{
+		cout << "the bigger is: " << "area1";
+
+	}
+	else if (area1 < area2)
+	{
+		cout << "the bigger is: " << "area2";
+	}
+	else
+	{
+		cout << "is equaled";
+	}
+
+}
+
+
+int main()
+{
+	int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	
+	rectangle r1(a,b);
+	rectangle r2(c,d);
+
+	r1.print(r1, r2);
+	bigger(r1, r2);
+
+}
