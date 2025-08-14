@@ -1,68 +1,62 @@
 using namespace std;
-#include <iostream>
+#include<iostream>
 
-
-class library
+class Library
 {
-public :
+
+public:
 	virtual void name(string a) = 0;
 	virtual void price(int b) = 0;
 
 };
 
-class book1:public library
+class book1:public Library
 {
 public :
-	void name(string a) override
+	void name(string a)override
 	{
-		cout << "name is :  " <<a<< endl;
+		cout << "name is : " << a << endl;
 	}
-	void price(int b) override
+	void price(int b)override
 	{
-		cout << "price is :  " << b<<" " << "$" << endl;
+		cout << "price is : " << b << endl;
 	}
+
 
 };
 
 
-class book2 :public library
+class book2 :public  Library
 {
 public:
-	void name(string a) override
+	void name(string a)override
 	{
-		cout << "name is :  "<<a << endl;
+		cout << "name is : " << a << endl;
 	}
-	void price(int b) override
+	void price(int b)override
 	{
-		cout << "price is : " <<b << " " << "$" << endl;
+		cout << "price is : " << b << endl;
 	}
+
 
 };
-
-
 
 int main()
 {
-	library*Library;
+	Library* library;
 
 
 	book1 a;
 	book2 b;
 
+	library = &a;
 
-	Library = &a;
-	Library ->name("Murder on the Orient Express");
-	Library ->price(200);
+	library->name("Murder on the Orient Express");
+	library->price(900);
 
+	library = &b;
 
-
-	
-	
-
-	cout << "------------------------------"<<endl;
-
-	Library->name("And Then There Were None");
-	Library->price(300);
-	
+	library->name("And Then There Were None");
+	library->price(600);
 
 }
